@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .navbar{
+            height:700px;
+            width:100%;
+            display:flex;
+        }
+        .navbar img{
+            height:100%;
+            width:100%;
+            
+        }
+        .header img{
+            height:50px;
+            width:150px;
+            margin-left:-1300px;
+            margin-bottom: -80px;
+        }
+        .rightheader{
+            margin-left:-380px;
+            margin-top:30px;
+        }
+        .rightheader select{
+            height:30px;
+            width:100px;
+            border-radius: 5px;
+            background-color:black;
+            color:white;
+            margin-right:10px;
+        }
+        .rightheader button{
+            height:30px;
+            width:90px;
+            background-color: red;
+            border-radius:5px;
+            color:white
+        }
+        .content{
+            margin-left:-1200px;
+            margin-top:160px;
+        }
+        .content h1{
+            color: white;
+            font-size: 60px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .content h2{
+            color:white;
+            font-size:30px;
+            margin-left:250px;
+        }
+        .content h3{
+            color:white;
+            font-size:30px;
+        }
+        .start{
+            margin-left:-1050px;
+        }
+        .start input{
+            height:50px;
+            width:350px;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color:
+        }
+        .start button{
+            height:50px;
+            width:200px;
+            background-color: red;
+            color:white;
+            font-size: 20px;
+            border-radius: 5px;
+            padding-left:10px;
+        }
+        .body1{
+            display:flex;
+        }
+        .content1{
+            width:1000px;
+            background-color:black;
+            color:white;
+        }
+        .content1 h1{
+            margin-top:150px;
+            margin-left:180px;
+        }
+        .content1 h2{
+            margin-top:100px;
+            margin-left:180px;
+        }
+        .body1 img{
+            height:400px;
+            width:500px;
+        }
+        .body2{
+            display:flex;
+        }
+        .content2{
+            width:1000px;
+            background-color:black;
+            color:white;
+        }
+        .content2 h1{
+            margin-top:150px;
+            margin-left:180px;
+        }
+        .content2 h2{
+            margin-top:100px;
+            margin-left:180px;
+        }
+        .body3{
+            display:flex;
+        }
+        .content3{
+            width:1000px;
+            background-color:black;
+            color:white;
+        }
+        .content3 h1{
+            margin-top:150px;
+            margin-left:180px;
+        }
+        .content3 h2{
+            margin-top:100px;
+            margin-left:180px;
+        }
+        .body4{
+            display:flex;
+        }
+        .content4{
+            width:1000px;
+            background-color:black;
+            color:white;
+        }
+        .content4 h1{
+            margin-top:150px;
+            margin-left:180px;
+        }
+        .content4 h2{
+            margin-top:100px;
+            margin-left:180px;
+        }
+        .faq{
+            height:900px;
+            width:100%;
+            background-color:black;
+        }
+        .faq h1{
+            text-align:center;
+            color:white;
+        }
+        h1{
+            position:relative;
+            top:30px;
+            font-size: 50px;
+        }
+        .faq{
+            height:800px;
+            width:100%;
+            background-color:black;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .quest{
+            color:white;
+            margin:5px;
+            height:80px;
+            width:1000px;
+            background-color: rgb(82, 79, 79);
+        }
+        .quest h2{
+            margin-left: 40px;
+            margin-top: 25px;
+        }
+        .sgn h3{
+            color:white;
+            margin-top:10px;
+        }
+        .start2 input{
+            height:50px;
+            width:350px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .start2 button{
+            height:50px;
+            width:200px;
+            background-color: red;
+            color:white;
+            font-size: 20px;
+            border-radius: 5px;
+            padding-left:10px;
+        }
+        .footer{
+            padding:50px 15% 10px;
+            border-top:6px solid #333;
+            color:#777;
+            background-color: black;
+        }
+        .footer a{
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom:100px;
+            color:#777; 
+        }
+        .footer .col{
+            flex-basis:25%;
+            flex-grow: 1;
+            margin-bottom: 1px;
+            display: flex;
+            justify-content:space-between;
+        }
+        .footer .col a{
+            display:block;
+            text-decoration: none;
+            color:#777;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .lang select{
+            height:30px;
+            width:100px;
+            border-radius: 5px;
+            background-color:black;
+            color:white;
+            margin-right:10px;
+        }
+    </style>
+
+    <!-- ...............HTML Code............. -->
+
+    
+</head>
+<body>
+    <div class="navbar">
+        <img src="header-image.png" alt="">
+            <div class="header">
+                <img src="logo.png" alt="">
+                <div class="rightheader">
+                    <select id="Language" name="Language" id="">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                    </select>
+                    <button type="submit">Sign In</button>
+                </div>
+                <div class="content">
+                    <h1>The Biggest Indian hits. Ready to <br>watch here from Rs 149</h1><br><br>
+                    <h2>Join today.Cancel anytime. <br><br></h2>
+                    <h3>Ready to watch? enter your E-mail to create or restart your membership.</h3><br>
+                </div>
+                <div class="start">
+                    <input type="email" placeholder="Email address">
+                    <button type="submit">Get Started  ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body1">
+        <div class="content1">
+            <h1>Enjoy your TV</h1>
+            <h2>Watch on smart TVs, PlayStation, Xbox,<br> Chromecast, Apple TV, Blu-ray players and <br>more.</h2>
+        </div>
+        <div class="img">
+            <img src="feature-1.png" alt="">
+        </div>
+    </div>
+    <div class="body2">
+        <div class="img">
+            <img src="feature-2.png" alt="">
+        </div>
+        <div class="content2">
+            <h1>Download your <br>shows to watch <br>offline</h1>
+            <h2>Save your favourites easily and always have <br> something to watch.</h2>
+        </div>
+    </div>
+    <div class="body3">
+        <div class="content3">
+            <h1>Watch everywhere </h1>
+            <h2>Stream unlimited movies and TV shows on <br> your phone, tablet, laptop, and TV.</h2>
+        </div>
+        <div class="img">
+            <img src="feature-3.png" alt="">
+        </div>
+    </div>
+    <div class="body4">
+        <div class="img">
+            <img src="feature-4.png" alt="">
+        </div>
+        <div class="content4">
+            <h1>Create profiles for <br> kids </h1>
+            <h2>Send children on adventures with their favourite <br>characters in a space made just for them—free <br> with your membership.</h2>
+        </div>
+    </div>
+    <div class="faq">
+        <h1>Frequently Asked Question</h1>
+        <br><br><br><br>
+        <div class="quest">
+           <h2>What is Netflix?</h2> 
+        </div>
+        <div class="quest">
+            <h2>How much does Netflix Cost?</h2>
+        </div>
+        <div class="quest">
+            <h2>Where can I watch?</h2>
+        </div>
+        <div class="quest">
+            <h2>How do I cancel?</h2>
+        </div>
+        <div class="quest">
+            <h2>Where can I watch on Netflix?</h2>
+        </div>
+        <div class="quest">
+            <h2>Is netflix good for kids?</h2>
+        </div>
+        <div class="sgn">
+            <h3>Ready to watch? enter your E-mail to create or restart your membership.</h3><br>
+        </div>
+        <div class="start2">
+            <input type="email" placeholder="Email address">
+            <button type="submit">Get Started  ></button>
+        </div>
+    </div>
+    <div class="footer">
+        <h3><a href="#">Questions? Call 000-800-919-1694</a></h3>
+            <div class="row">
+                <div class="col">
+                    <a href="">FAQ</a>
+                    <a href="">Help Center</a>
+                    <a href="">Account</a>
+                    <a href="">Media center</a>
+    
+            </div>
+           <div class="col">
+                <a href="">Investor Relation</a>
+                <a href="">Jobs</a>
+                <a href="">Ways to Watch</a>
+                <a href="">Terms Of Use</a>
+           </div>
+            
+           <div class="col">
+                <a href="">Privacy</a>
+                <a href="">Cookie Preferences</a>
+                <a href="">Corporate Information</a>
+                <a href="">Contact Us</a>
+           </div>
+            <div class="col">
+                    <a href="">Speed Test</a>
+                    <a href="">Legal Notices</a>
+                    <a href="">Only on Netflix</a>
+                    <a href="">About Us</a>
+            </div>
+            <br>
+            <div class="lang">
+                <select id="Language" name="Language" id="">
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                </select>
+            </div>
+            <br>
+            <h4>Netflix India</h4>
+        </div>
+    </div>
+  
+</body>
+</html>
